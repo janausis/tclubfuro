@@ -15,10 +15,13 @@ Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzun
    html_theme = "furo"
    ```
 
-
+<br />
+<br />
 
 ------------------------------------------------------------------------------------------------------------------------
 
+<br />
+<br />
 
 
 <h1 align="center">Furo</h1>
