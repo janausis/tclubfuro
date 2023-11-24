@@ -21,7 +21,7 @@ Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzun
 ------------------------------------------------------------------------------------------------------------------------
 
 
-<h1 align="center">Furo</h1>
+<h1 align="center"><a href="https://github.com/pradyunsg/furo">Furo</a></h1>
 
 
 <p align="center">
@@ -32,8 +32,6 @@ Mehr Info über <a href="https://github.com/pradyunsg/furo">Furo</a>
 <a href="https://pradyunsg.me/furo/">
   <img align="center" src="https://github.com/pradyunsg/furo/raw/main/docs/_static/demo.png" alt="Demo image">
 </a>
-
-
 
 ## Elevator pitch
 
@@ -46,11 +44,3 @@ Mehr Info über <a href="https://github.com/pradyunsg/furo">Furo</a>
 - **Good looking content** --- through clear typography and well-stylised elements.
 - **Good looking search** --- helps readers find what they want quickly.
 - **Biased for smaller docsets** --- intended for smaller documentation sets, where presenting the entire hierarchy in the sidebar is not overwhelming.
-
-
-
-<!-- end used-by -->
-
-## License
-
-This project is licensed under the MIT License.
