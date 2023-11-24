@@ -1,5 +1,5 @@
 # TClub Theme
-Dieses Repository beinhaltet eine modifizierte Version des Faro Themes.
+Dieses Repository beinhaltet eine modifizierte Version des Furo Themes.
 Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzung und andere Gestaltungen.
 
 ### Installation
@@ -15,7 +15,11 @@ Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzun
    html_theme = "furo"
    ```
 
+
+
 ------------------------------------------------------------------------------------------------------------------------
+
+
 
 <h1 align="center">Furo</h1>
 <p align="center">
