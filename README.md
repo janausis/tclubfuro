@@ -1,4 +1,4 @@
-# TClub Theme
+# Sphinx TClub Theme
 Dieses Repository beinhaltet eine modifizierte Version des <a href="https://github.com/pradyunsg/furo">Furo</a> Themes.
 Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzung und andere Gestaltungen.
 
