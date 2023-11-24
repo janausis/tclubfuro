@@ -20,8 +20,6 @@ Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzun
 
 <h1 align="center"><a href="https://github.com/pradyunsg/furo">Furo</a></h1>
 
-------------------------------------------------------------------------------------------------------------------------
-
 
 
 
