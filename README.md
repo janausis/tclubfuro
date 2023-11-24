@@ -1,3 +1,19 @@
+# TClub Theme
+Dieses Repository beinhaltet eine modifizierte Version des Faro Themes.
+Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzung und andere Gestaltungen.
+
+### Installation
+Achtung, dieses Modul ersetzt das normale Furo. Es kann nur eine von beiden Versionen genutzt werden.
+`pip install git+git@github.com/janausis/tclubfuro.git`
+
+Update die `html_theme` in `conf.py`.
+
+   ```py
+   html_theme = "furo"
+   ```
+
+------------------------------------------------------------------------------------------------------------------------
+
 <h1 align="center">Furo</h1>
 <p align="center">
   A clean customisable <a href="https://www.sphinx-doc.org/">Sphinx</a> documentation theme.
