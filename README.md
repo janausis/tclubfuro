@@ -19,7 +19,6 @@ Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzun
 <br />
 
 <h1 align="center">Furo</h1>
-------------------------------------------------------------------------------------------------------------------------
 
 
 <p align="center">
