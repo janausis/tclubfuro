@@ -6,7 +6,7 @@ Diese macht einige Anpassungen für den TClub, wie etwa eine bessere Übersetzun
 1. Achtung, dieses Modul ersetzt das normale Furo. Es kann nur eine von beiden Versionen genutzt werden.
 
    ```text
-   pip install git+git@github.com/janausis/tclubfuro.git
+   pip install git+ssh://git@github.com/janausis/tclubfuro.git
    ```
 
 3. Update die `html_theme` in `conf.py`.
