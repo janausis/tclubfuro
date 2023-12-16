@@ -123,16 +123,33 @@
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
+            {%- if theme_last_updated -%}
+            <div class="last-updated">
+                Zuletzt aktualisiert am {{ theme_last_updated }}
+            </div>
+            {%- endif %}
             {%- if show_copyright %}
             <div class="copyright">
               {%- if hasdoc('copyright') %}
-                {% trans path=pathto('copyright'), copyright=copyright|e -%}
-                  <a href="{{ path }}">Copyright</a> &#169; {{ copyright }}
-                {%- endtrans %}
+                {%- if theme_year -%}
+                  {% trans path=pathto('copyright'), copyright=copyright|e -%}
+                    <a href="{{ path }}">Copyright</a> &#169; {{ copyright }} vom TClub, {{ theme_year }}
+                  {%- endtrans %}
+                {% else %}
+                  {% trans path=pathto('copyright'), copyright=copyright|e -%}
+                    <a href="{{ path }}">Copyright</a> &#169; {{ copyright }} vom TClub
+                  {%- endtrans %}
+                {% endif %}
               {%- else %}
-                {% trans copyright=copyright|e -%}
-                  Copyright &#169; {{ copyright }}
-                {%- endtrans %}
+                {%- if theme_year -%}
+                  {% trans copyright=copyright|e -%}
+                    Copyright &#169; {{ copyright }} vom TClub, {{ theme_year }}
+                  {%- endtrans %}
+                {% else %}
+                  {% trans copyright=copyright|e -%}
+                    Copyright &#169; {{ copyright }} vom TClub
+                  {%- endtrans %}
+                {% endif %}
               {%- endif %}
             </div>
             {%- endif %}
@@ -144,13 +161,7 @@
             {% trans %}
             <a href="https://github.com/pradyunsg/furo">Furo</a>)
             {% endtrans %}
-            {%- if last_updated -%}
-            <div class="last-updated">
-              {% trans last_updated=last_updated|e -%}
-                Last updated on {{ last_updated }}
-              {%- endtrans -%}
-            </div>
-            {%- endif %}
+
           </div>
           <div class="right-details">
             {% if theme_footer_icons or READTHEDOCS -%}
