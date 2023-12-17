@@ -129,34 +129,50 @@
             </div>
             {%- endif %}
             {%- if show_copyright %}
+
             <div class="copyright">
               {%- if hasdoc('copyright') %}
-                {%- if theme_year -%}
+
                   {% trans path=pathto('copyright'), copyright=copyright|e -%}
-                    <a href="{{ path }}">Copyright</a> &#169; {{ copyright }} vom TClub, {{ theme_year }}
+                    <a href="{{ path }}">Copyright</a>
+                  {% endtrans %} &#169;
+                  {% if copyright == 'Jannis Martensen' %}
+                    <p class="coolguy show" style="display: inline;">
+                  {% endif %}
+                  {% trans copyright=copyright|e -%}
+                    {{ copyright }}
                   {%- endtrans %}
-                {% else %}
-                  {% trans path=pathto('copyright'), copyright=copyright|e -%}
-                    <a href="{{ path }}">Copyright</a> &#169; {{ copyright }} vom TClub
-                  {%- endtrans %}
-                {% endif %}
+                  {% if copyright == 'Jannis Martensen' %}
+                    </p>
+                  {% endif %} vom TClub
+                  {% if theme_year %}
+                    , {{ theme_year }}
+                  {% endif %}
+
               {%- else %}
-                {%- if theme_year -%}
-                  {% trans copyright=copyright|e -%}
-                    Copyright &#169; {{ copyright }} vom TClub, {{ theme_year }}
-                  {%- endtrans %}
-                {% else %}
-                  {% trans copyright=copyright|e -%}
-                    Copyright &#169; {{ copyright }} vom TClub
-                  {%- endtrans %}
+
+                Copyright &#169;
+                {% if copyright == 'Jannis Martensen' %}
+                  <p class="coolguy show" style="display: inline;">
                 {% endif %}
+                {% trans copyright=copyright|e -%}
+                  {{ copyright }}
+                {%- endtrans %}
+                {% if copyright == 'Jannis Martensen' %}
+                  </p>
+                {% endif %} vom TClub
+                {% if theme_year %}
+                  , {{ theme_year }}
+                {% endif %}
+
               {%- endif %}
             </div>
+
             {%- endif %}
             {% trans %}Erstellt mit {% endtrans -%}
             {%- if show_sphinx -%}
             {% trans %}<a href="https://www.sphinx-doc.org/">Sphinx</a> und {% endtrans -%}
-            Jannis Martensens <a href="https://github.com/janausis/tclubfuro">TclubFuro</a>  (basierend auf <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>s
+            <p class="coolguy" style="display: inline;">Jannis Martensens</p> <a href="https://github.com/janausis/tclubfuro">TclubFuro</a>  (basierend auf <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>s
             {% endif -%}
             {% trans %}
             <a href="https://github.com/pradyunsg/furo">Furo</a>)

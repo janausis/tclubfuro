@@ -11,21 +11,32 @@ documentation page.
 Hope your day's going well. :)
 
 -#}
-<a class="sidebar-brand{% if logo %} centered{% endif %}" href="{{ theme_logo_link }}" target="_blank" rel="noopener noreferrer">
+<div class="sidebar-brand{% if logo %} centered{% endif %}">
   {% block brand_content %}
   {%- if logo_url %}
-  <div class="sidebar-logo-container">
-    <img class="sidebar-logo" src="{{ logo_url }}" alt="Logo"/>
-  </div>
+  <a href="{{ theme_logo_link }}" target="_blank" rel="noopener noreferrer">
+    <div class="sidebar-logo-container">
+      <img class="sidebar-logo" src="{{ logo_url }}" alt="Logo"/>
+    </div>
+  </a>
   {%- endif %}
   {%- if theme_light_logo and theme_dark_logo %}
-  <div class="sidebar-logo-container">
-    <img class="sidebar-logo only-light" src="{{ pathto('_static/' + theme_light_logo, 1) }}" alt="Light Logo"/>
-    <img class="sidebar-logo only-dark" src="{{ pathto('_static/' + theme_dark_logo, 1) }}" alt="Dark Logo"/>
-  </div>
+  <a href="{{ theme_logo_link }}" target="_blank" rel="noopener noreferrer">
+    <div class="sidebar-logo-container">
+      <img class="sidebar-logo only-light" src="{{ pathto('_static/' + theme_light_logo, 1) }}" alt="Light Logo"/>
+      <img class="sidebar-logo only-dark" src="{{ pathto('_static/' + theme_dark_logo, 1) }}" alt="Dark Logo"/>
+    </div>
+  </a>
+  {%- endif %}
+  {% if copyright %}
+    {% if copyright == "Jannis Martensen" %}
+      <span class="sidebar-brand-text author coolguy">{{ copyright }}</span>
+    {% else %}
+      <span class="sidebar-brand-text author">{{ copyright }}</span>
+    {% endif %}
   {%- endif %}
   {% if not theme_sidebar_hide_name %}
-  <span class="sidebar-brand-text">{{ docstitle if docstitle else project }}</span>
+    <span class="sidebar-brand-text">{{ docstitle if docstitle else project }}</span>
   {%- endif %}
   {% endblock brand_content %}
-</a>
+</div>
